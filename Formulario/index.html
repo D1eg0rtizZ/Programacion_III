@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULARIO</title>
+    <link rel="stylesheet" href="/Formulario/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Formulario Básico</h1>
+        <form id="formulario">
+            <div class="content">
+                <label for="nombre">Nombre</label>
+                <input type="text" placeholder="Diego Alejandro" id="nombre" maxlength="21" required>
+
+                <label for="apellido">Apellidos</label>
+                <input type="text" placeholder="Martínez Ortiz" id="apellido" maxlength="21" required>
+
+                <label for="celular">Telefono/Celular</label>
+                <input type="tel" placeholder="+57" id="celular" maxlength="10" pattern="\d{10}" required>
+
+                <label for="email">Correo electrónico</label>
+                <input type="email" placeholder="ejemplo@email.com" id="email" required>
+
+                <button type="submit" id="enviar">Enviar datos</button>
+            </div>
+        </form>
+    </div>
+    <script src="/Formulario/script.js"></script>
+</body>
+</html>

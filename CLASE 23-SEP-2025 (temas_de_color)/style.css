@@ -1,0 +1,139 @@
+*{
+    transition: all 1s ease;
+}
+
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+h1{
+    text-align: center;
+}
+
+.contador{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #0001;
+}
+
+.theme-buttons{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+button:not(.excluir){
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.excluir{
+    border-radius: 20px;
+    border: 1px solid whitesmoke;
+    padding: 10px;
+}
+
+.excluir:hover{
+    background-color: #c792fc;
+}
+
+.content{
+    text-align: center;
+    padding: 20px;
+}
+
+.demo-image{
+    width: 200px;
+    height: 150px;
+    /* max-width: 100%; */
+    /* max-height: 100%; */
+    /* object-fit: contain; */
+    background-color: #ddd;
+    margin: 20px auto;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.counter{
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* TEMAS */
+
+/* CLARO */
+
+.tema-claro{
+    background-color: white;
+    color: black;
+}
+
+.tema-claro .container{
+    background-color: white;
+    border: 2px solid #007bff;
+}
+
+.tema-claro .counter{
+    background-color: #e9ecef;
+    color: #495057;
+}
+
+.tema-claro button{
+    background-color: #007bff;
+    color: white;
+}
+
+/* OSCURO */
+.tema-oscuro{
+    background-color: #1a1a1a;
+    color: #f0f9fa;
+}
+
+.tema-oscuro .container{
+    background-color: #2d2d2d;
+    border: 2px solid #444;
+}
+
+.tema-oscuro .counter{
+    background-color: #495057;
+    color: white;
+}
+
+.tema-oscuro button{
+    background-color: #6c757d;
+    color: white;
+}
+
+/* TEMA MORADO*/
+
+.tema-morado{
+    background-color: #e3f2fd;
+    color: #7f00ff;
+}
+
+.tema-morado .container{
+    background-color: #e6a2eb;
+    border: 2px solid #c792fc;
+}
+
+.tema-morado button{
+    background-color: #904ed3;
+    color: white;
+}
+
+.tema-morado .counter{
+    background-color: #bddebd;
+    color: #7536b4;
+}
