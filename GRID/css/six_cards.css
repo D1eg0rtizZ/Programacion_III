@@ -1,0 +1,70 @@
+#section-cards{padding:2.75rem 0;text-align:center}
+#section-cards h2{font-size:1.9rem;color:var(--earth-dark);margin-bottom:1.75rem}
+
+/* Cards grid */
+.cards-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap:1.5rem;
+  max-width:var(--max-w);
+  margin:0 auto;
+}
+
+/* Card base */
+.card{
+  background: linear-gradient(180deg, var(--surface), rgba(255,255,250,0.96));
+  border-radius:var(--r-lg);
+  border:1px solid var(--border);
+  padding:1.6rem;
+  display:flex;flex-direction:column;justify-content:space-between;gap:1rem;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--med), box-shadow var(--med), box-shadow var(--med);
+  position:relative;
+  overflow:visible;
+}
+
+/* Paper/acuarela glow on hover */
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow: 0 24px 48px rgba(55,40,32,0.11), inset 0 0 28px rgba(132,162,136,0.02);
+  outline: 1px solid rgba(74,122,90,0.06);
+}
+
+/* Card icon circle (translucent) */
+.card-icon{
+  font-size:2.6rem;
+  color:var(--leaf);
+  background: linear-gradient(180deg, rgba(74,122,90,0.12), rgba(168,111,69,0.03));
+  padding:.9rem;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;
+  transition: transform var(--fast), background var(--fast);
+}
+.card:hover .card-icon{transform:scale(1.06); background: linear-gradient(180deg, rgba(74,122,90,0.2), rgba(74,122,90,0.06)); color:#fff}
+
+/* Features list */
+.card-features{display:flex;flex-direction:column;gap:.8rem}
+.card-feature{display:flex;gap:.6rem;align-items:flex-start}
+.feature-icon{font-size:1.2rem;color:var(--leaf-soft);margin-top:.2rem}
+.card-feature p{color:var(--text);font-size:.96rem;line-height:1.45}
+
+/* Card button */
+.card-button{
+  margin-top:.6rem;
+  width:fit-content;
+  background: linear-gradient(90deg, rgba(134,173,143,1), rgba(74,122,90,1));
+  color:#fff;padding:.6rem .95rem;border-radius:8px;border:none;
+  box-shadow: 0 8px 20px rgba(74,122,90,0.08);
+}
+.card-button:hover{transform:translateY(-3px);box-shadow:0 18px 36px rgba(74,122,90,0.12)}
+
+/* Cascading entrance for cards (subtle) */
+.card{opacity:0; transform: translateY(6px); animation: cardIn var(--slow) both; animation-delay: 0s}
+.cards-grid .card:nth-child(1){animation-delay:.05s}
+.cards-grid .card:nth-child(2){animation-delay:.12s}
+.cards-grid .card:nth-child(3){animation-delay:.18s}
+.cards-grid .card:nth-child(4){animation-delay:.24s}
+.cards-grid .card:nth-child(5){animation-delay:.30s}
+.cards-grid .card:nth-child(6){animation-delay:.36s}
+
+@keyframes cardIn{
+  to{opacity:1; transform:translateY(0)}
+}

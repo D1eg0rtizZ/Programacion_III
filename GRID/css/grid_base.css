@@ -1,0 +1,86 @@
+:root{
+  /* Paleta: equilibrio tierra / planta / cielo */
+  --bg-cream: #f6efe6;        /* fondo general */
+  --bg-wash:  linear-gradient(180deg, rgba(246,239,230,1) 0%, rgba(249,246,243,1) 100%);
+  --surface: #fffaf6;         /* tarjetas / surfaces */
+  --muted: #9b8b7f;           /* texto secundario */
+  --text: #3b2b23;            /* texto principal */
+  --earth: #a86f45;           /* terracota / tierra */
+  --earth-dark: #7a4b2d;
+  --leaf: #4a7a5a;            /* verde fresco (acentos) */
+  --leaf-soft: #86ad8f;       /* verde suave */
+  --sky: #87a7c4;             /* azul cielo suave */
+  --border: rgba(121,95,75,0.12);
+
+  /* Depth */
+  --shadow-sm: 0 2px 6px rgba(55,40,32,0.06);
+  --shadow-md: 0 8px 22px rgba(55,40,32,0.09);
+  --shadow-lg: 0 18px 40px rgba(55,40,32,0.12);
+
+  /* Radii & spacing */
+  --r-sm: 6px;
+  --r-md: 12px;
+  --r-lg: 18px;
+  --max-w: 1200px;
+
+  /* Transitions */
+  --fast: 180ms cubic-bezier(.2,.9,.3,1);
+  --med: 320ms cubic-bezier(.2,.9,.3,1);
+  --slow: 520ms cubic-bezier(.2,.9,.3,1);
+
+  /* Texture (subtle paper/acuarela feel) - uses layered gradients */
+  --paper-texture: 
+    linear-gradient(180deg, rgba(255,255,255,0.015) 0%, rgba(0,0,0,0.01) 100%),
+    radial-gradient(1200px 600px at 10% 10%, rgba(120,90,65,0.02), transparent 20%),
+    radial-gradient(900px 360px at 90% 90%, rgba(70,110,100,0.01), transparent 18%);
+}
+
+/* Reset & base */
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family: "JetBrains Mono", monospace;
+  background: var(--bg-cream);
+  color: var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.6;
+  min-height:100vh;
+}
+
+/* Typography */
+h1,h2,h3,h4{color:var(--text);line-height:1.25;font-weight:600}
+h1{font-size:2.1rem}
+h2{font-size:1.6rem}
+p{color:var(--text);margin-bottom:1rem}
+
+/* Utility images and buttons */
+img{max-width:100%;height:auto;display:block;border-radius:var(--r-md)}
+a{color:inherit;text-decoration:none}
+
+/* Buttons (unificados) */
+.btn, .card-button, .footer-button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:.5rem;
+  padding:.6rem 1.1rem;
+  border-radius:10px;
+  border:none;
+  cursor:pointer;
+  font-weight:600;
+  transition: transform var(--fast), box-shadow var(--fast), opacity var(--fast);
+  text-decoration:none;
+  background: linear-gradient(180deg, rgba(134,173,143,0.98), rgba(74,122,90,0.98));
+  color:#fff;
+  box-shadow: 0 6px 18px rgba(74,122,90,0.12);
+}
+.btn:hover, .card-button:hover, .footer-button:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(74,122,90,0.12);
+}
+.btn:active, .card-button:active{transform: translateY(0)}
+
+/* Small helpers */
+.container{max-width:var(--max-w);margin:0 auto;padding-inline:1rem}
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(1px,1px,1px,1px)}

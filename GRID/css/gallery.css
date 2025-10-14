@@ -1,0 +1,58 @@
+#section-gallery{padding:2.75rem 0;text-align:center}
+#section-gallery h2{font-size:1.9rem;color:var(--earth-dark);margin-bottom:1.5rem}
+
+/* Gallery grid: square tiles */
+#section-gallery > div{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: .9rem;
+  max-width:var(--max-w);
+  margin:0 auto;
+  align-items:stretch;
+}
+
+/* Each image wrapper uses aspect ratio to preserve squares */
+#section-gallery img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:var(--r-md);
+  box-shadow: 0 8px 20px rgba(120,90,65,0.05);
+  cursor:pointer;
+  filter:brightness(.98);
+  transition: transform var(--med), box-shadow var(--med), filter var(--med);
+  position:relative;
+  display:block;
+}
+
+/* Hover effect: subtle zoom-out (slightly pull back) + soft overlay */
+#section-gallery img:hover{
+  transform: scale(1.03);
+  box-shadow: 0 18px 40px rgba(120,90,65,0.1);
+  filter: brightness(1.02);
+}
+
+/* Sequential appearance */
+#section-gallery img{opacity:0; transform: translateY(8px); animation: galleryIn .6s both; animation-delay:0s}
+#section-gallery img:nth-child(1){animation-delay:.04s}
+#section-gallery img:nth-child(2){animation-delay:.08s}
+#section-gallery img:nth-child(3){animation-delay:.12s}
+#section-gallery img:nth-child(4){animation-delay:.16s}
+#section-gallery img:nth-child(5){animation-delay:.20s}
+#section-gallery img:nth-child(6){animation-delay:.24s}
+#section-gallery img:nth-child(7){animation-delay:.28s}
+#section-gallery img:nth-child(8){animation-delay:.32s}
+#section-gallery img:nth-child(9){animation-delay:.36s}
+#section-gallery img:nth-child(10){animation-delay:.40s}
+#section-gallery img:nth-child(11){animation-delay:.44s}
+#section-gallery img:nth-child(12){animation-delay:.48s}
+#section-gallery img:nth-child(13){animation-delay:.52s}
+#section-gallery img:nth-child(14){animation-delay:.56s}
+#section-gallery img:nth-child(15){animation-delay:.60s}
+#section-gallery img:nth-child(16){animation-delay:.64s}
+#section-gallery img:nth-child(17){animation-delay:.68s}
+#section-gallery img:nth-child(18){animation-delay:.72s}
+
+@keyframes galleryIn{
+  to{opacity:1; transform:translateY(0)}
+}
