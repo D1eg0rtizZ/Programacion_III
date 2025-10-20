@@ -1,0 +1,5 @@
+Ejecutar el archivo "index.html" con un servidor.
+Para este caso, se usó XAMPP:
+(Muy importante copiar la carpeta del proyecto "formulario_PHP" dentro de C:\xampp\htdocs)
+Activar "Apache" y "MySQL"
+En el navegador copiar el url --> http://localhost/formulario_PHP/index.html
